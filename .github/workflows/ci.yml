@@ -473,6 +473,7 @@ jobs:
           CMAKE_SUBDIR_TEST: ${{ matrix.cmake_subdir_test }}
           CMAKE_INSTALL: ${{ matrix.cmake_install }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "linux"
         run: |
           echo '==================================> SETUP'
           if [ -n "$GHA_CONTAINER" ]; then
@@ -712,6 +713,7 @@ jobs:
           CMAKE_SUBDIR_TEST: ${{ matrix.cmake_subdir_test }}
           CMAKE_INSTALL: ${{ matrix.cmake_install }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "osx"
         run: |
           echo '==================================> SETUP'
           set -ex
